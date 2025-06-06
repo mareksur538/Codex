@@ -8,9 +8,13 @@
         <Key android:codes="113" android:keyLabel="Q" />
         <Key android:codes="117" android:keyLabel="U" />
         <Key android:codes="101" android:keyLabel="E" />
+        <Key android:codes="101" android:keyLabel="E" />
         <Key android:codes="114" android:keyLabel="R" />
         <Key android:codes="116" android:keyLabel="T" />
         <Key android:codes="121" android:keyLabel="Y" />
+        <Key android:codes="119" android:keyLabel="W" />
+        <Key android:codes="105" android:keyLabel="I" />
+        <Key android:codes="111" android:keyLabel="O" />
     </Row>
     <Row>
         <Key android:codes="97" android:keyLabel="A" />
@@ -19,11 +23,9 @@
         <Key android:codes="102" android:keyLabel="F" />
         <Key android:codes="103" android:keyLabel="G" />
         <Key android:codes="104" android:keyLabel="H" />
-    </Row>
-    <Row>
-        <Key android:codes="119" android:keyLabel="W" />
-        <Key android:codes="105" android:keyLabel="I" />
-        <Key android:codes="111" android:keyLabel="O" />
+        <Key android:codes="106" android:keyLabel="J" />
+        <Key android:codes="107" android:keyLabel="K" />
+        <Key android:codes="108" android:keyLabel="L" />
         <Key android:codes="112" android:keyLabel="P" />
     </Row>
     <Row>
@@ -36,9 +38,12 @@
         <Key android:codes="109" android:keyLabel="M" />
     </Row>
     <Row>
-        <Key android:codes="-1" android:keyLabel="Caps Love" android:isModifier="true" android:keyWidth="20%p" />
-        <Key android:codes="32" android:keyLabel="Space" android:keyWidth="40%p" />
-        <Key android:codes="10" android:keyLabel="Enter" android:keyWidth="20%p" />
-        <Key android:codes="-5" android:keyLabel="Del" android:keyWidth="20%p" />
+        <Key android:codes="-101" android:keyLabel="\uD83C\uDF08" android:keyWidth="14%p" />
+        <Key android:codes="-102" android:keyLabel="\u2764\uFE0F" android:keyWidth="14%p" />
+        <Key android:codes="-103" android:keyLabel="\uD83E\uDD84" android:keyWidth="14%p" />
+        <Key android:codes="-104" android:keyLabel="\uD83C\uDFF3\uFE0F\u200D\uD83C\uDF08" android:keyWidth="14%p" />
+        <Key android:codes="32" android:keyLabel="Space" android:keyWidth="30%p" />
+        <Key android:codes="10" android:keyLabel="Enter" android:keyWidth="12%p" />
+        <Key android:codes="-5" android:keyLabel="Del" android:keyWidth="12%p" />
     </Row>
 </Keyboard>
