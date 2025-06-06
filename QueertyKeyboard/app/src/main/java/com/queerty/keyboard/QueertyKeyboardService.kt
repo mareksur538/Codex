@@ -11,8 +11,12 @@ class QueertyKeyboardService : InputMethodService(), KeyboardView.OnKeyboardActi
 
     private lateinit var kv: KeyboardView
     private lateinit var keyboard: Keyboard
-    private var caps = false
-    private var typed = StringBuilder()
+    private val typed = StringBuilder()
+
+    private val RAINBOW_CODE = -101
+    private val HEART_CODE = -102
+    private val UNICORN_CODE = -103
+    private val FLAG_CODE = -104
 
     override fun onCreateInputView(): View {
         kv = layoutInflater.inflate(R.layout.keyboard_view, null) as KeyboardView
@@ -26,12 +30,14 @@ class QueertyKeyboardService : InputMethodService(), KeyboardView.OnKeyboardActi
         val ic: InputConnection = currentInputConnection
         when (primaryCode) {
             Keyboard.KEYCODE_DELETE -> ic.deleteSurroundingText(1, 0)
-            Keyboard.KEYCODE_SHIFT -> handleCapsLove()
             Keyboard.KEYCODE_DONE -> ic.sendKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_ENTER))
+            RAINBOW_CODE -> ic.commitText("\uD83C\uDF08", 1)
+            HEART_CODE -> ic.commitText("\u2764\uFE0F", 1)
+            UNICORN_CODE -> ic.commitText("\uD83E\uDD84", 1)
+            FLAG_CODE -> ic.commitText("\uD83C\uDFF3\uFE0F\u200D\uD83C\uDF08", 1)
             else -> {
                 val code = primaryCode.toChar()
-                val text = if (caps) code.uppercaseChar().toString() else code.toString()
-                ic.commitText(text, 1)
+                ic.commitText(code.toString(), 1)
                 typed.append(code)
                 checkForConfetti()
             }
@@ -52,14 +58,10 @@ class QueertyKeyboardService : InputMethodService(), KeyboardView.OnKeyboardActi
 
     override fun swipeUp() {}
 
-    private fun handleCapsLove() {
-        caps = !caps
-        Toast.makeText(this, "\uD83D\uDC95", Toast.LENGTH_SHORT).show()
-    }
-
     private fun checkForConfetti() {
         val word = typed.toString().lowercase()
-        if (word.endsWith("love") || word.endsWith("gay") || word.endsWith("pride") || word.endsWith("radosť")) {
+        val keywords = listOf("love", "gay", "pride", "lgbti", "hrdosť", "hrdost", "radosť", "radost")
+        if (keywords.any { word.endsWith(it) }) {
             Toast.makeText(this, "\uD83C\uDF89", Toast.LENGTH_SHORT).show()
             typed.clear()
         }
