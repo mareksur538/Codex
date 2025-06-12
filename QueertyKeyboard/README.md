@@ -1,6 +1,6 @@
 # Queerty Keyboard
 
-This is a sample Android keyboard designed for the LGBT+ community. The first row spells **QUEERTY** and the `P` key is moved down to keep the row balanced. Caps Lock was removed and replaced by a rainbow button that inserts the rainbow emoji. Extra emoji keys (heart, unicorn and pride flag) are included. Typing words like `Love`, `Gay`, `LGBTI`, `Pride`, `Hrdosť` or `Radosť` shows a short confetti toast.
+This is a sample Android keyboard designed for the LGBT+ community. The first row spells **QUEERTY** and the `P` key is moved down to keep the row balanced. Caps Lock was removed and replaced by a rainbow button that inserts the rainbow emoji. Extra emoji keys (heart, rainbow heart, unicorn and pride flag) are included. Typing words like `Love`, `Gay`, `LGBTI`, `Pride`, `Hrdosť` or `Radosť` shows a short confetti toast.
 
 ## Building
 

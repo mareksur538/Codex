@@ -17,6 +17,7 @@ class QueertyKeyboardService : InputMethodService(), KeyboardView.OnKeyboardActi
     private val HEART_CODE = -102
     private val UNICORN_CODE = -103
     private val FLAG_CODE = -104
+    private val HEART_RAINBOW_CODE = -105
 
     override fun onCreateInputView(): View {
         kv = layoutInflater.inflate(R.layout.keyboard_view, null) as KeyboardView
@@ -35,6 +36,7 @@ class QueertyKeyboardService : InputMethodService(), KeyboardView.OnKeyboardActi
             HEART_CODE -> ic.commitText("\u2764\uFE0F", 1)
             UNICORN_CODE -> ic.commitText("\uD83E\uDD84", 1)
             FLAG_CODE -> ic.commitText("\uD83C\uDFF3\uFE0F\u200D\uD83C\uDF08", 1)
+            HEART_RAINBOW_CODE -> ic.commitText("\u2764\uFE0F\u200D\uD83C\uDF08", 1)
             else -> {
                 val code = primaryCode.toChar()
                 ic.commitText(code.toString(), 1)
