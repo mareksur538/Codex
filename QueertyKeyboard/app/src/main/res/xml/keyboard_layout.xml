@@ -42,6 +42,7 @@
         <Key android:codes="-102" android:keyLabel="\u2764\uFE0F" android:keyWidth="14%p" />
         <Key android:codes="-103" android:keyLabel="\uD83E\uDD84" android:keyWidth="14%p" />
         <Key android:codes="-104" android:keyLabel="\uD83C\uDFF3\uFE0F\u200D\uD83C\uDF08" android:keyWidth="14%p" />
+        <Key android:codes="-105" android:keyLabel="\u2764\uFE0F\u200D\uD83C\uDF08" android:keyWidth="14%p" />
         <Key android:codes="32" android:keyLabel="Space" android:keyWidth="30%p" />
         <Key android:codes="10" android:keyLabel="Enter" android:keyWidth="12%p" />
         <Key android:codes="-5" android:keyLabel="Del" android:keyWidth="12%p" />
